@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Permisos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #3b3b3b;
+        }
+        h2 {
+            color: #3b3b3b;
+            border-bottom: 2px solid #3b3b3b;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .permission-name {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .permission-description {
+            margin-left: 20px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Lista de Permisos</h1>
+
+    <h2>Almacenamiento Externo</h2>
+    <ul>
+        <li><span class="permission-name">WRITE_EXTERNAL_STORAGE:</span> <span class="permission-description">Permite escribir, modificar y eliminar contenido de la memoria externa. Deben ser concedidos para las apps que necesitan crear, modificar o leer algún dato desde un archivo de nuestra memoria.</span></li>
+        <li><span class="permission-name">READ_EXTERNAL_STORAGE:</span> <span class="permission-description">Da la posibilidad de permitir el acceso de lectura a todos los archivos de la memoria externa.</span></li>
+    </ul>
+
+    <h2>Ubicación</h2>
+    <ul>
+        <li><span class="permission-name">ACCESS_COARSE_LOCATION:</span> <span class="permission-description">Permite localización no detallada, basada en la red de telefonía móvil (Cell-ID) y el Wi-Fi. Es útil en lugares cerrados donde no hay señal de GPS.</span></li>
+        <li><span class="permission-name">ACCESS_FINE_LOCATION:</span> <span class="permission-description">Permite una localización detallada mediante el GPS. Al conceder este permiso, también se habilita el permiso anterior para obtener una mejor ubicación.</span></li>
+    </ul>
+
+    <h2>Telefonía</h2>
+    <ul>
+        <li><span class="permission-name">CALL_PHONE:</span> <span class="permission-description">Permite a la app realizar llamadas directamente por medio de la red telefónica móvil. Debe ser evaluado cuidadosamente ya que tiene costo.</span></li>
+        <li><span class="permission-name">READ_PHONE_STATE:</span> <span class="permission-description">Consulta el identificador y estado del teléfono. Es útil para juegos que se pausarán cuando recibamos una llamada. Concede acceso al IMEI, el identificador único de Google e inclusive el número de la terminal que está llamando.</span></li>
+        <li><span class="permission-name">READ_CALL_LOG:</span> <span class="permission-description">Permite leer el registro de llamadas telefónicas.</span></li>
+        <li><span class="permission-name">WRITE_CALL_LOG:</span> <span class="permission-description">Permite modificar el registro de llamadas telefónicas.</span></li>
+        <li><span class="permission-name">ADD_VOICEMAIL:</span> <span class="permission-description">Permite crear nuevos mensajes de voz en el sistema.</span></li>
+        <li><span class="permission-name">USE_SIP:</span> <span class="permission-description">Permite a nuestra app utilizar el protocolo SIP (Session Initiation Protocol) para hablar en VoIP (Voz sobre IP).</span></li>
+        <li><span class="permission-name">PROCESS_OUTGOING_CALLS:</span> <span class="permission-description">Permite procesar llamadas salientes, controlarlas, modificarlas o abortarlas.</span></li>
+    </ul>
+
+    <h2>Mensajes de Texto (SMS)</h2>
+    <ul>
+        <li><span class="permission-name">SEND_SMS:</span> <span class="permission-description">Permite a la app enviar mensajes de texto sin autorización del usuario. Recomendado habilitarlo solo si es necesario porque tiene costo.</span></li>
+        <li><span class="permission-name">RECEIVE_SMS:</span> <span class="permission-description">Permite recibir mensajes de texto.</span></li>
+        <li><span class="permission-name">READ_SMS:</span> <span class="permission-description">Permite leer los mensajes de texto entrantes.</span></li>
+        <li><span class="permission-name">RECEIVE_MMS:</span> <span class="permission-description">Permite recibir mensajes de tipo MMS, accediendo a ellos.</span></li>
+        <li><span class="permission-name">RECEIVE_WAP_PUSH:</span> <span class="permission-description">Permite recibir mensajes de tipo WAP PUSH, una variante de los SMS para acceder a páginas WAP sin necesidad de la URL.</span></li>
+    </ul>
+
+    <h2>Contactos</h2>
+    <ul>
+        <li><span class="permission-name">READ_CONTACTS:</span> <span class="permission-description">Permite acceder a la información de los contactos almacenados en el dispositivo.</span></li>
+        <li><span class="permission-name">WRITE_CONTACTS:</span> <span class="permission-description">Permite escribir y/o modificar información de los contactos.</span></li>
+        <li><span class="permission-name">GET_ACCOUNTS:</span> <span class="permission-description">Permite acceder a la lista de cuentas en el servicio de cuentas.</span></li>
+    </ul>
+
+    <h2>Calendario</h2>
+    <ul>
+        <li><span class="permission-name">READ_CALENDAR:</span> <span class="permission-description">Permite leer los elementos del calendario.</span></li>
+        <li><span class="permission-name">WRITE_CALENDAR:</span> <span class="permission-description">Permite escribir en el calendario pero no leer los elementos.</span></li>
+    </ul>
+
+    <h2>Cámara</h2>
+    <ul>
+        <li><span class="permission-name">CAMERA:</span> <span class="permission-description">Permite el acceso a la cámara y la posibilidad de tomar fotos y/o videos.</span></li>
+    </ul>
+
+    <h2>Micrófono</h2>
+    <ul>
+        <li><span class="permission-name">RECORD_AUDIO:</span> <span class="permission-description">Concede la posibilidad de grabar desde el micrófono del dispositivo.</span></li>
+    </ul>
+
+    <h2>Sensores Corporales</h2>
+    <ul>
+        <li><span class="permission-name">BODY_SENSORS:</span> <span class="permission-description">Concede acceso a los sensores encargados de monitorear al cuerpo del usuario.</span></li>
+    </ul>
+
+    <h2>Comunicaciones</h2>
+    <ul>
+        <li><span class="permission-name">INTERNET:</span> <span class="permission-description">Concede la posibilidad de conectarse a través de internet.</span></li>
+        <li><span class="permission-name">ACCESS_NETWORK_STATE:</span> <span class="permission-description">Concede información sobre el estado de las redes.</span></li>
+        <li><span class="permission-name">CHANGE_NETWORK_STATE:</span> <span class="permission-description">Permite cambiar el estado de la red.</span></li>
+        <li><span class="permission-name">NFC:</span> <span class="permission-description">Permite realizar operaciones de red a través de NFC (Near Field Communication).</span></li>
+        <li><span class="permission-name">TRANSMIT_IR:</span> <span class="permission-description">Habilita la transmisión por infrarrojos, útil para controlar electrodomésticos por control remoto.</span></li>
+    </ul>
+
+    <h2>Conexión Wi-Fi</h2>
+    <ul>
+        <li><span class="permission-name">ACCESS_WIFI_STATE:</span> <span class="permission-description">Permite ver el estado y todas las Wi-Fi disponibles.</span></li>
+        <li><span class="permission-name">CHANGE_WIFI_STATE:</span> <span class="permission-description">Permite cambiar el estado de Wi-Fi.</span></li>
+        <li><span class="permission-name">CHANGE_WIFI_MULTICAST_STATE:</span> <span class="permission-description">Permite ingresar al modo multicast Wi-Fi y cambiar su estado.</span></li>
+    </ul>
+
+    <h2>Bluetooth</h2>
+    <ul>
+        <li><span class="permission-name">BLUETOOTH:</span> <span class="permission-description">Permite crear una conexión de Bluetooth entre dos dispositivos, previo emparejamiento.</span></li>
+        <li><span class="permission-name">BLUETOOTH_ADMIN:</span> <span class="permission-description">Permite descubrir y emparejarse con otros dispositivos.</span></li>
+    </ul>
+
+    <h2>Consumo de Batería</h2>
+    <ul>
+        <li><span class="permission-name">WAKE_LOCK:</span> <span class="permission-description">Impide que el dispositivo entre en modo suspensión, ideal para el GPS.</span></li>
+        <li><span class="permission-name">FLASHLIGHT:</span> <span class="permission-description">Permite encender el flash de la cámara.</span></li>
+        <li><span class="permission-name">VIBRATE:</span> <span class="permission-description">Permite hacer vibrar el teléfono.</span></li>
+    </ul>
+
+    <h2>Aplicaciones</h2>
+    <ul>
+        <li><span class="permission-name">RECEIVE_BOOT_COMPLETED:</span> <span class="permission-description">Se inicia al encender el dispositivo, permitiendo a una aplicación recibir el estado ACTION_BOOT_COMPLETED y arrancar cuando se cumpla.</span></li>
+        <li><span class="permission-name">BROADCAST_STICKY:</span> <span class="permission-description">Permite el envío de anuncios broadcast permanentes, como el estado de la batería.</span></li>
+        <li><span class="permission-name">KILL_BACKGROUND_PROCESSES:</span> <span class="permission-description">Permite matar procesos de fondo, similar al método que usa el sistema para liberar memoria.</span></li>
+        <li><span class="permission-name">REORDER_TASKS:</span> <span class="permission-description">Permite a la aplicación ordenar la lista de tareas.</span></li>
+        <li><span class="permission-name">INSTALL_SHORTCUT:</span> <span class="permission-description">Permite instalar o añadir accesos directos.</span></li>
+        <li><span class="permission-name">UNINSTALL_SHORTCUT:</span> <span class="permission-description">Permite desinstalar o quitar accesos directos.</span></li>
+        <li><span class="permission-name">GET_PACKAGE_SIZE:</span> <span class="permission-description">Permite obtener el tamaño del paquete.</span></li>
+        <li><span class="permission-name">EXPAND_STATUS_BAR:</span> <span class="permission-description">Permite a una aplicación expandir o contraer la barra de estado.</span></li>
+    </ul>
+</div>
+
+</body>
+</html>
